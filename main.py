@@ -1,11 +1,11 @@
-import os
+from os import listdir
 from PIL import Image
-import cv2
-import numpy as np 
+from cv2 import imread
+from numpy import array
 from PIL import Image, ImageOps 
-import time
-from pyautogui import typewrite, hotkey
-import keyboard
+from time import sleep
+from pyautogui import typewrite
+from keyboard import press_and_release
 
 
 
@@ -20,7 +20,7 @@ time_till_start = 5 #in seconds           change tis to higher number if your lo
 
 
 
-pics = os.listdir("pics")
+pics = listdir("pics")
 max_lenght = maximal_characters_per_line
 dir_to_pics = [f"pics/{i}"  for i in pics]
 hhhh = ["l","."]
@@ -32,7 +32,7 @@ wide = how_wide
 lenght = len(hhhh)
 multi_int_to_char = 256/lenght
 
-cv2_im = cv2.imread(dir_to_pics[0])
+cv2_im = imread(dir_to_pics[0])
 im = Image.open(dir_to_pics[0])
 
 
@@ -40,11 +40,10 @@ y,x,z = cv2_im.shape
 multiplier = x/max_lenght
 x = int(x/multiplier)
 y = int((y/multiplier)/wide)
-print(cv2_im.shape)
 
 im = im.resize((x,y))
 im = ImageOps.grayscale(im) 
-img_as_numpy_array = np.array(im)
+img_as_numpy_array = array(im)
 
 
 chat_mes_line_per_line = []
@@ -57,16 +56,16 @@ for line in img_as_numpy_array:
 
 
 
-time.sleep(time_till_start)
+sleep(time_till_start)
 
 
 for chat_line in chat_mes_line_per_line:
 
     if League_of_legends_ingame_chat:
         if ALL_chat:
-            keyboard.press_and_release('shift+enter')   #pro LOL
+            press_and_release('shift+enter')   #pro LOL
         else:
-            keyboard.press_and_release('enter')
+            press_and_release('enter')
 
     typewrite(chat_line,interval=time_between_letters)
     typewrite("\n")
