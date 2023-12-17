@@ -17,9 +17,9 @@ or this:
 
 
 
+Video tutorial: https://youtu.be/09qf40mconY
 
 How to use:
-video tutorial: https://youtu.be/09qf40mconY
 1) get the exe or .py file
 2) create a folder named "pics"
 3) put one image into the folder
