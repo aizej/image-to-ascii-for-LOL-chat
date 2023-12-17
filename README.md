@@ -14,3 +14,14 @@ to this:
 or this:
 
 ![kys_loading](https://github.com/aizej/image-to-ascii-for-LOL-chat/assets/61479273/09810242-5ef5-4325-b6ac-68ae70523e82)
+
+
+
+
+How to use:
+1) get the exe or .py file
+2) create a folder named "pics"
+3) put one image into the folder
+4) start the exe or .py script
+5) alt-tab to a lol game
+6) profit
