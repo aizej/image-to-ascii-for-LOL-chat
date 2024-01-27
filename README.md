@@ -2,7 +2,6 @@
 a program that makes chat messages using ASCII characters to look like the image of your choosing
 
 from this:
-(Keep Yourself Safe)
 
 ![gg](https://github.com/aizej/image-to-ascii-for-LOL-chat/assets/61479273/c1f375e6-c29f-4096-9265-daffe138bd0b)
 
